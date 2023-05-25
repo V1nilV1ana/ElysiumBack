@@ -1,4 +1,4 @@
-const Coments = require("./coments.model")
+const Coments = require("./Coments.model")
 const Users = require("./User.model")
 
 module.exports = (sequelize, Sequelize) => {

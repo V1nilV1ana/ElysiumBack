@@ -1,4 +1,4 @@
-const Coments = require("../models/coments.model")
+const Coments = require("../models/Coments.model")
 const Posts = require("../models/posts.model")
 
 module.exports = (sequelize, Sequelize) => {
