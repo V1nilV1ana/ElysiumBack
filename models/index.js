@@ -1,10 +1,11 @@
 const { Sequelize } = require('sequelize');
 
 //conexão sqlite
-const sequelize = new Sequelize({
+const sequelize = new Sequelize('postgres://elysiumdb_user:GgXXk34bKVbjsLnCwe7a7jOvQrVTO2KG@dpg-chnri9o2qv207f3abkg0-a/elysiumdb')
+/*{
     dialect: 'sqlite',
     storage: './database.sqlite'
-  })
+  }*/
 
 sequelize.authenticate();
 
