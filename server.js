@@ -4,8 +4,8 @@ const cookieSession = require("cookie-session");
 
 const app = express();
 
-//rodar angular no port http://localhost:4200 "https://7w8omu-4200.csb.app" { credentials: true, origin: ["http://localhost:4200"]}
-app.use(cors({ credentials: true, origin: ["http://localhost:4200"]}))
+//rodar angular no port http://localhost:4200 "https://jrrq1r-4200.csb.app" { credentials: true, origin: ["http://localhost:4200"]}
+app.use(cors({ credentials: true, origin: ["https://jrrq1r-4200.csb.app"]}))
 
 app.use(express.json());
 
