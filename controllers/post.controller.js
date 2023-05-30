@@ -24,15 +24,28 @@ exports.create = (req, res) => {
     });
     return;
   }
+  if (!req.body.UserId) {
+    res.status(400).send({
+      message: "Id do usuario não pode estar vazio!"
+    });
+    return;
+  }
 
   const post = {
     title: req.body.title,
     desc: req.body.desc,
     content: req.body.content,
+    UserId: req.body.UserId
   }
 
-
   Posts.create(post)
+    .then(post => {
+      return post.addUsers(req.body.UserId, {
+        through: {
+          UserId: req.body.UserId
+        }
+      });
+    })
     .then(() => {
       res.send({ message: "Post criado com sucesso!" });
     })
