@@ -98,6 +98,9 @@ exports.update = (req, res) => {
   if (req.body.coment) {
     updateFields.coment = req.body.coment;
   }
+  if (req.body.like) {
+    updateFields.like = req.body.like;
+  }
 
 
   Coments.update(updateFields, {
